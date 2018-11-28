@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/heima_ssm.iml" filepath="$PROJECT_DIR$/heima_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_dao/ssm_dao.iml" filepath="$PROJECT_DIR$/ssm_dao/ssm_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_service/ssm_service.iml" filepath="$PROJECT_DIR$/ssm_service/ssm_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_utils/ssm_utils.iml" filepath="$PROJECT_DIR$/ssm_utils/ssm_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_web/ssm_web.iml" filepath="$PROJECT_DIR$/ssm_web/ssm_web.iml" />
     </modules>
   </component>
 </project>
