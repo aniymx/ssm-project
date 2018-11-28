@@ -19,6 +19,14 @@ public class ProductController {
     public ModelAndView showProductList(){
         ModelAndView mv = new ModelAndView();
         List<Product> productList = productService.findAll();
+
+        //测试数据库是否联通
+        for (Product product : productList) {
+            System.out.println(product);
+
+        }
+
+
         mv.addObject("productlist",productList);
         //跳转的路径
         mv.setViewName("");
