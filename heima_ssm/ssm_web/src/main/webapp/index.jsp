@@ -7,6 +7,6 @@
 <body>
 <h2>Hello World!</h2>
 
-<jsp:forward page="/product/showProductList.do"/>
+<jsp:forward page="/product/findAll.do"/>
 </body>
 </html>

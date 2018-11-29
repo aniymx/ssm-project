@@ -14,10 +14,22 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
-    @RequestMapping("/showProductList.do")
+@RequestMapping("save.do")
+    public String saveProduct(Product product){
+
+        productService.saveProduct(product);
+
+        return "redirect:findAll.do";
+    }
+
+
+
+
+    @RequestMapping("/findAll.do")
     public ModelAndView showProductList(){
         ModelAndView mv = new ModelAndView();
         List<Product> productList = productService.findAll();
+/*
 
         //测试数据库是否联通
         for (Product product : productList) {
@@ -25,6 +37,7 @@ public class ProductController {
 
         }
 
+*/
 
         mv.addObject("productList",productList);
         //跳转的路径
