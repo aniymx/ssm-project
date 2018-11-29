@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/ssm_service/ssm_service.iml" filepath="$PROJECT_DIR$/ssm_service/ssm_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm_utils/ssm_utils.iml" filepath="$PROJECT_DIR$/ssm_utils/ssm_utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm_web/ssm_web.iml" filepath="$PROJECT_DIR$/ssm_web/ssm_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sssm_domain/sssm_domain.iml" filepath="$PROJECT_DIR$/sssm_domain/sssm_domain.iml" />
     </modules>
   </component>
 </project>

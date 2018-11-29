@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ssm_web:war exploded">
-    <output-path>$PROJECT_DIR$/ssm_web/target/ssm_web</output-path>
+    <output-path>$PROJECT_DIR$/ssm_web/target/ssm_web-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -12,6 +12,12 @@
           </element>
           <element id="archive" name="com.itheima.dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="ssm_dao" />
+          </element>
+          <element id="archive" name="sssm_domain-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="sssm_domain" />
+          </element>
+          <element id="archive" name="ssm_utils-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ssm_utils" />
           </element>
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.6.8" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.2.RELEASE" />
@@ -41,12 +47,12 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.0.1.RELEASE" />
-          <element id="library" level="project" name="Maven: com.oracle:ojdbc14:11.2.0.1.0" />
+          <element id="library" level="project" name="Maven: com.oracle:ojdbc14:10.2.0.4.0" />
           <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/ssm_web/target/ssm_web/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/ssm_web/target/ssm_web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="ssm_web/web/Web" />
     </root>

@@ -1,10 +1,9 @@
 package com.itheima.web.controller;
 
-import com.itheima.domain.Product;
 import com.itheima.service.ProductService;
+import com.ithiema.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
-    @RequestMapping("/showProductList")
+    @RequestMapping("/showProductList.do")
     public ModelAndView showProductList(){
         ModelAndView mv = new ModelAndView();
         List<Product> productList = productService.findAll();
@@ -27,9 +26,9 @@ public class ProductController {
         }
 
 
-        mv.addObject("productlist",productList);
+        mv.addObject("productList",productList);
         //跳转的路径
-        mv.setViewName("");
+        mv.setViewName("product-list");
 
         return mv;
     }

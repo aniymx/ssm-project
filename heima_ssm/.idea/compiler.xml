@@ -10,6 +10,7 @@
         <module name="ssm_service" />
         <module name="ssm_utils" />
         <module name="ssm_web" />
+        <module name="sssm_domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -18,6 +19,7 @@
       <module name="ssm_service" target="1.8" />
       <module name="ssm_utils" target="1.8" />
       <module name="ssm_web" target="1.8" />
+      <module name="sssm_domain" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

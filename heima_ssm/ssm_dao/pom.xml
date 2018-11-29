@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>com.itheima.dao</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.itheima</groupId>
+            <artifactId>sssm_domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
