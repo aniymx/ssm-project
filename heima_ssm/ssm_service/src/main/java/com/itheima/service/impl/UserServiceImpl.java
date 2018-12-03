@@ -10,7 +10,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -66,4 +65,24 @@ public class UserServiceImpl implements UserService {
 
         return userDao.findById(id);
     }
+
+    //更新用户的资料
+    @Override
+    public void updateUser(UserInfo userInfo) {
+        userInfo.setPassword(BCryptPasswordEncoderUtils.encodePassword(userInfo.getPassword()));
+
+        userDao.updateUser(userInfo);
+    }
+
+    //给用户添加角色
+    @Override
+    public void addRoleToUser(String userId, String[] roleId) {
+
+        for (String id : roleId) {
+            userDao.addRoleToUser(userId, id);
+        }
+
+    }
+
+
 }

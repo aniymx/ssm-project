@@ -19,4 +19,29 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> findAll() {
         return roleDao.findAll();
     }
+
+    @Override
+    public void save(Role role) {
+        roleDao.save(role);
+    }
+
+    @Override
+    public List<Role> findOtherRole(String id) {
+
+        return roleDao.findOtherRole(id);
+    }
+
+    @Override
+    public Role findById(String id) {
+
+
+        return roleDao.findById(id);
+    }
+
+    @Override
+    public void addPermissionToRole(String roleId, String[] ids) {
+        for (String id : ids) {
+            roleDao.addPermissionToRole(roleId,id);
+        }
+    }
 }

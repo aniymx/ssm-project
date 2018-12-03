@@ -79,7 +79,7 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 			<h1>
-				用户管理 <small>全部用户</small>
+				用户拥有的角色权限详情 <small>全部用户</small>
 			</h1>
 			<ol class="breadcrumb">
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
@@ -143,13 +143,13 @@
 								</tr>
 
 								<tbody>
-									<c:forEach items="${user.roles}" var="role">
-										<tr data-tt-id="1" data-tt-parent-id="0">
+									<c:forEach items="${user.roles}" var="role" varStatus="vs">
+										<tr data-tt-id="${vs.index+1}" data-tt-parent-id="0">
 											<td>${role.roleName }</td>
 											<td>${role.roleDesc }</td>
 										</tr>
 										<c:forEach items="${role.permissions}" var="permission">
-											<tr data-tt-id="1-1" data-tt-parent-id="1">
+											<tr data-tt-id="1-1" data-tt-parent-id="${vs.index+1}">
 												<td>${permission.permissionName}</td>
 												<td>${permission.url}</td>
 											</tr>

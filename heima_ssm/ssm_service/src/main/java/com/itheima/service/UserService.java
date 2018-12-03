@@ -12,4 +12,9 @@ public interface UserService extends UserDetailsService {
     void saveUser(UserInfo userInfo);
 
     UserInfo findById(String id);
+
+    void updateUser(UserInfo userInfo);
+
+
+    void addRoleToUser(String userId, String[] roleId);
 }

@@ -3,6 +3,7 @@ package com.itheima.dao;
 import com.ithiema.domain.Role;
 import com.ithiema.domain.UserInfo;
 import org.apache.ibatis.annotations.*;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -42,4 +43,11 @@ public interface UserDao {
             @Result(column = "id", property = "roles", javaType = List.class, many = @Many(select = "com.itheima.dao.RoleDao.findRoleById")),
     })
     UserInfo findById(String id);
+
+    @Update("update users set username=#{username},email=#{email},password=#{password},phoneNum=#{phoneNum},status=#{status} where id = #{id}")
+    void updateUser(UserInfo userInfo);
+
+    //为用户添加叫角色
+    @Insert("insert into users_role(userId,roleId) values(#{userId},#{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId") String roleId);
 }
